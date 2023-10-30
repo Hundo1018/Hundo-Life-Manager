@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'widgets/note.dart';
+import 'package:hundo_life_manager/widgets/traditional_note.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
+// import 'widgets/traditional_note.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // 必须确保初始化完成
-  SharedPreferences prefs = await SharedPreferences.getInstance();
+  // WidgetsFlutterBinding.ensureInitialized(); // 必须确保初始化完成
+  // SharedPreferences prefs = await SharedPreferences.getInstance();
 
   // 从SharedPreferences中获取先前保存的数据
-  String? savedData = prefs.getString('noteData'); // 替换'keyName'为您的键
+  // String? savedData = prefs.getString('noteData'); // 替换'keyName'为您的键
 
-  runApp(MyApp(savedData ?? "null"));
+  // runApp(MyApp(savedData ?? "null"));
+  runApp(const MyApp("Test"));
 }
+
+
+
 
 class MyApp extends StatelessWidget {
   final String _savedData;
@@ -69,6 +74,6 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
-        body: Note(widget.savedData));
+        body: TraditionalNote(widget.savedData));
   }
 }

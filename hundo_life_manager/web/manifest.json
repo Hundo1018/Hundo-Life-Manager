@@ -1,6 +1,6 @@
 {
-    "name": "hundo_life_manager",
-    "short_name": "hundo_life_manager",
+    "name": "大狗筆記",
+    "short_name": "大狗筆記",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

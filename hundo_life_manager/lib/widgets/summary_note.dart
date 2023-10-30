@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hundo_life_manager/widgets/traditional_note.dart';
 
-class Note extends StatefulWidget {
-  const Note({super.key});
+class SummaryNote extends StatefulWidget {
+  const SummaryNote({super.key});
 
   @override
-  State<Note> createState() => _NoteState();
+  State<SummaryNote> createState() => _SummaryNoteState();
 }
 
-class _NoteState extends State<Note> {
+class _SummaryNoteState extends State<SummaryNote> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
