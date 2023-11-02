@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hundo_life_manager/widgets/traditional_note.dart';
 
 class SummaryNote extends StatefulWidget {
   const SummaryNote({super.key});
