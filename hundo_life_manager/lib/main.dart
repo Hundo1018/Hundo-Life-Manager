@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hundo_life_manager/widgets/note_block.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 // import 'widgets/traditional_note.dart';
 
@@ -55,12 +56,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return GridView.extent(
-        maxCrossAxisExtent: 500,
+        maxCrossAxisExtent: 150,
         padding: const EdgeInsets.all(4),
         mainAxisSpacing: 4,
         crossAxisSpacing: 4,
         children:
-            List.generate((30), (i) => Image.asset('assets/images/dog.png')),
+            const [NoteBlock()]
+            // List.generate((30), (i) => Image.asset('assets/images/dog.png')),
+            
             );
 
     /*Scaffold(

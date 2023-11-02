@@ -16,9 +16,27 @@ class _NoteBlockState extends State<NoteBlock> {
     return const Column(
       children: [
         Row(
-          children: [CueNote(), Note()],
+          children: [
+            CueNote(content: 'Cue\r\nCue\r\nCue\r\n'),
+            Note(
+              content: Text.rich(TextSpan(
+                children: <InlineSpan>[
+                  TextSpan(text: 'Flutter is\r\nthe best'),
+                  WidgetSpan(
+                      child: SizedBox(
+                    width: 120,
+                    height: 50,
+                    child: Card(
+                        color: Colors.blue,
+                        child: Center(child: Text('Hello World!'))),
+                  )),
+                  TextSpan(text: "\r\nasd")
+                ],
+              )),
+            )
+          ],
         ),
-        SummaryNote()
+        SummaryNote(content: 'Summary\r\nSummary\r\nSummary\r\n')
       ],
     );
   }
