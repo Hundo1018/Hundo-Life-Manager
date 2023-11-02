@@ -55,27 +55,18 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return GridView.extent(
-        maxCrossAxisExtent: 150,
-        padding: const EdgeInsets.all(4),
-        mainAxisSpacing: 4,
-        crossAxisSpacing: 4,
-        children:
-            const [NoteBlock()]
-            // List.generate((30), (i) => Image.asset('assets/images/dog.png')),
-            
-            );
-
-    /*Scaffold(
-        appBar: AppBar(
-          // TRY THIS: Try changing the color here to a specific color (to
-          // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-          // change color while the other colors stay the same.
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text(widget.title),
-        ),
-        body: TraditionalNote(widget.savedData));*/
-  }
+    return ListView.separated(
+      itemBuilder: (BuildContext context, int index) {
+        return const NoteBlock();
+      },
+      itemCount: 3,
+      padding: const EdgeInsets.symmetric(vertical: 32),
+      shrinkWrap: true,
+      separatorBuilder: (BuildContext context, int index) {
+        return const Divider(
+          color: Colors.blue,
+        );
+      },
+    );
+      }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CueNote extends StatefulWidget {
-  final String content;
+  final Text content;
   const CueNote({super.key,required this.content});
 
   @override
@@ -11,6 +11,6 @@ class CueNote extends StatefulWidget {
 class _CueNoteState extends State<CueNote> {
   @override
   Widget build(BuildContext context) {
-    return Text(widget.content);
+    return widget.content;
   }
 }
