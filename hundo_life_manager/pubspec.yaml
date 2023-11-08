@@ -39,7 +39,9 @@ dependencies:
   sqflite: ^2.3.0
   web_socket_channel: ^2.4.0
   url_launcher: ^6.2.1
-
+  flutter_quill:
+    git: https://github.com/singerdmx/flutter-quill.git
+    
 dev_dependencies:
   flutter_test:
     sdk: flutter
